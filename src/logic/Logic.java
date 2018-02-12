@@ -12,12 +12,9 @@ public class Logic {
         }
 
         int maxValue = 0;
-        for ( int k = 0 ; k < n ; k++ ){
+        for ( int k = 0 ; k < Math.round( n ); k++ ){
             if ( k == 0 ){
                 maxValue = arg[k] + arg[n-1-k];
-            }
-            else if ( arg[k] <= arg[k-1] && arg[n-1-k] <= arg[n-k]) {
-                continue;
             }
 
             int x = arg[k] + arg[n-1-k];
