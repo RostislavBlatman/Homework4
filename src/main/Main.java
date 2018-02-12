@@ -11,9 +11,9 @@ public class Main {
         System.out.println("Введите количество чисел: ");
         Scanner num = new Scanner(System.in);
         int n = num.nextInt();
-        Test.razmer ( n );
+        Test.size ( n );
         Integer[] arg = new Integer[n];
-        Logic.logic( n , arg );
+        Logic.logic( arg );
 
     }
 }
