@@ -3,21 +3,18 @@ package logic;
 import java.util.Scanner;
 
 public class Logic {
-    public static void logic( Integer[] arg ){
-        int n = arg.length;
-        for  ( int i = 0 ; i < n ; i++ ){
+    public static void logic( int lenght ){
+        Integer[] arg = new Integer[lenght];
+        for  ( int i = 0 ; i < lenght ; i++ ){
             System.out.println("Введите аргумент: ");
             Scanner num = new Scanner(System.in);
             arg[i] = num.nextInt();
         }
 
-        int maxValue = 0;
-        for ( int k = 0 ; k < Math.round( n ); k++ ){
-            if ( k == 0 ){
-                maxValue = arg[k] + arg[n-1-k];
-            }
+        int maxValue = arg[0] + arg[lenght-1];
+        for ( int k = 1 ; k < Math.round( lenght ); k++ ){
 
-            int x = arg[k] + arg[n-1-k];
+            int x = arg[k] + arg[lenght-1-k];
 
             if ( x > maxValue  ){
                 maxValue = x;

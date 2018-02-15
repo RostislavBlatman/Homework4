@@ -12,8 +12,7 @@ public class Main {
         Scanner num = new Scanner(System.in);
         int n = num.nextInt();
         Test.size ( n );
-        Integer[] arg = new Integer[n];
-        Logic.logic( arg );
+        Logic.logic( n );
 
     }
 }
